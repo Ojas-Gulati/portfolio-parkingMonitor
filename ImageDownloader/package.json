@@ -1,0 +1,15 @@
+{
+  "name": "imagefetch",
+  "version": "1.0.0",
+  "description": "Fetch and crop images on schedule",
+  "main": "FetchImage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "sharp": "^0.23.1"
+  }
+}

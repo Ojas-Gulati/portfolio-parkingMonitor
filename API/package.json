@@ -1,0 +1,25 @@
+{
+  "name": "ParkingAPI",
+  "version": "1.0.0",
+  "description": "REST API for finding parking availability",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.5.2",
+    "@tensorflow/tfjs-node": "^1.5.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "helmet": "^3.21.2",
+    "log4js": "^6.1.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "sharp": "^0.24.0"
+  }
+}

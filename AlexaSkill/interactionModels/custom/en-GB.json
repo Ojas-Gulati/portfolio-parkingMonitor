@@ -1,0 +1,141 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "parking monitor",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "FindParkingSpaceIntent",
+          "slots": [
+            {
+              "name": "ParkingSlot",
+              "type": "parkingslot"
+            }
+          ],
+          "samples": [
+            "check {ParkingSlot} location",
+            "Check space at {ParkingSlot}",
+            "check space",
+            "Do I have space",
+            "show me parking space at {ParkingSlot}",
+            "show me parking space for {ParkingSlot}",
+            "will I be able to park at {ParkingSlot}",
+            "Parking space at my house ",
+            "show me parking space",
+            "check parking space at {ParkingSlot} location",
+            "will I be able to park car at {ParkingSlot}",
+            "will I be able to park car",
+            "Do i have parking space at {ParkingSlot}",
+            "check parking space at {ParkingSlot}",
+            "Check space at  {ParkingSlot}",
+            "Check parking space",
+            "Do I have parking space"
+          ]
+        },
+        {
+          "name": "FindParkingSpaceAtOtherLocation",
+          "slots": [],
+          "samples": [
+            "No thank you",
+            "check other location",
+            "yes check other location",
+            "No I do not want to check",
+            "No please leave it",
+            "Yes please check second location",
+            "Yes please"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "0",
+              "name": {
+                "value": "both",
+                "synonyms": [
+                  "Both",
+                  "Any"
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "Side",
+                "synonyms": [
+                  "18 number",
+                  "neighbour location"
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "Front",
+                "synonyms": [
+                  "main location",
+                  "Own location",
+                  "Location 1"
+                ]
+              }
+            }
+          ],
+          "name": "parkingslot"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "FindParkingSpaceIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "ParkingSlot",
+              "type": "parkingslot",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.710216462663.983735269257.457912070630"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Slot.Validation.710216462663.983735269257.457912070630",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to check front or side location, say front or side"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "13"
+}

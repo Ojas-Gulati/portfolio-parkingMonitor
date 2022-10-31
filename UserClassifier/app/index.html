@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Image Classifier</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Scripts -->
+    <script>
+        delete module.exports
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div style="height: 100vh">
+        <div class="container-fluid h-100" id="request">
+            Where is the server?
+            <input id="serLoc" />
+            <button id="req">Request Batch</button>
+            Use arrow keys to move left/right
+        </div>
+        <div class="container-fluid h-100" id="process" style="display:none">
+            <div class="row h-100">
+                <div class="col-8 h-100 p-5 d-flex align-items-center"><div class="w-100"><span id="imgNo"></span><img id="carImg" class="w-100" /></div></div>
+                <div class="col-3 h-100">
+                    <div id="valid" class="box-item valid s1">Valid (v)</div>
+                    <div id="day" class="box-item day s1">Day (d)</div>
+                    <div id="car" class="box-item car s1">Car (c)</div>
+                    <div id="ours" class="box-item ours s1">Ours (o)</div>
+                    <div id="play" class="box-item play s1">Play (space)</div>
+                </div>
+                <div class="col-1 h-100">
+                    <div class="progress progress-bar-vertical h-100">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" id="progressBar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./window.js"></script>
+</body>
+
+</html>
